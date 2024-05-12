@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;400;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -49,7 +50,7 @@ div.contenedor{
     flex-direction: column;
     background-color: #c7e0ff;
     width: 80px;
-    padding: 35px;
+    padding: 15px;
     margin: 0px 0 15px 0;
     border-radius: 10px;
     flex-grow: 1;
@@ -76,6 +77,9 @@ div.contenedor{
     border-radius: 50px;
     text-transform: uppercase;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }
 
 .side-bar-links ul li:hover{
@@ -102,11 +106,6 @@ div.contenedor{
     background-color: #858686;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
 
 .fa-house {
     color: #ffd83c;
@@ -129,7 +128,7 @@ li {
     align-items: center;
     min-height: 250px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0;
     border: 2px solid #326aae;
     border-radius: 30px;
     background-color: #e3f2ff;
@@ -150,6 +149,7 @@ li {
     width: 100px;
     border-radius: 50%;
 }
+
 .migas_de_pan{
     display: flex;
     justify-content: flex-end;
@@ -157,7 +157,7 @@ li {
     height: 15px;
 }
 main{
-    background-color: #e34839;
+    background-color: #abc3ff;
     width: 80px;
     padding: 35px;
     margin: 15px 0px 15px 15px;
@@ -167,15 +167,20 @@ main{
 }
 
 footer{
-    background-color: #e3a425;
+    align-items: center;
+    background-color: #7a88ff;
+    height: 200px;
     padding: 20px 60px 0px;
     font-size: 12px;
     border-radius: 10px;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(4, auto);
     grid-template-areas: "institucional accesos contacto desarrollado" ". tup tup .";
 }
-
+footer li{
+    list-style: none;
+}
 .footer-link{
     color: black;
 }
@@ -194,6 +199,8 @@ footer{
     grid-area: accesos;
 }
 .contacto{
+    display: flex;
+    justify-content: center;
     grid-area: contacto;
 }
 .desarrollado{
@@ -208,4 +215,40 @@ footer{
     padding-top: 15px;
     font-style: italic;
     grid-area: tup;
+}
+
+@media screen and (max-width: 1024px) {
+    html{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .side-bar{
+        font-size: 20px;
+    }
+    .fa-house, .fa-folder, .fa-file, .fa-address-book{
+        padding-right: 15px;
+        font-size: 25px;
+    }
+    .user-icon{
+        width: 70px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+    html{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .side-bar-links ul li{
+        font-size: 10px;
+    }
+    .fa-house, .fa-folder, .fa-file, .fa-address-book{
+        padding-right: 15px;
+        font-size: 15px;
+    }
+    .user-icon{
+        width: 50px;
+    }
+
 }
