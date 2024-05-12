@@ -8,8 +8,6 @@
 
 html{
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     margin-left: 100px;
     margin-right: 100px;
     flex-direction: column;
@@ -24,6 +22,7 @@ header{
     background-image: url(/img/Nimagen-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 
 header h1{
@@ -42,7 +41,6 @@ header h1{
 div.contenedor{
     display: flex;
     min-height: 65.3vh;
-    /* height: 80vh; */
 }
 
 .side-bar{
@@ -52,6 +50,8 @@ div.contenedor{
     background-color: #c7e0ff;
     width: 80px;
     padding: 35px;
+    margin: 0px 0 15px 0;
+    border-radius: 10px;
     flex-grow: 1;
 }
 
@@ -125,7 +125,6 @@ li {
 }
 
 .comentario {
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     min-height: 250px;
@@ -151,19 +150,62 @@ li {
     width: 100px;
     border-radius: 50%;
 }
-
+.migas_de_pan{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    height: 15px;
+}
 main{
     background-color: #e34839;
     width: 80px;
     padding: 35px;
+    margin: 15px 0px 15px 15px;
+    border-radius: 10px;
     flex-grow: 3;
     order: 1;
 }
 
 footer{
-    align-items: center;
     background-color: #e3a425;
-    height: 200px;
+    padding: 20px 60px 0px;
+    font-size: 12px;
+    border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: "institucional accesos contacto desarrollado" ". tup tup .";
+}
+
+.footer-link{
+    color: black;
+}
+
+.footer-link::before{
+    content: ">";
+}
+.institucional{
+    display: flex;
+    justify-content: center;
+    grid-area: institucional;
+}
+.accesos{
+    display: flex;
+    justify-content: center;
+    grid-area: accesos;
+}
+.contacto{
+    grid-area: contacto;
+}
+.desarrollado{
+    display: flex;
+    justify-content: flex-end;
+    grid-area: desarrollado;
+}
+.tup{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 15px;
+    font-style: italic;
+    grid-area: tup;
 }
